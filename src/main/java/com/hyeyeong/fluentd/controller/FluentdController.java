@@ -10,10 +10,11 @@ import java.util.Map;
 
 @RestController
 @AllArgsConstructor
-public class MainController {
+@RequestMapping("/fluentd")
+public class FluentdController {
     private static FluentLogger LOG = FluentLogger.getLogger("fluentd.test");
 
-    @RequestMapping("/test")
+    @RequestMapping("/pub")
     public String test() {
         Map<String, Object> data = new HashMap<>();
         data.put("from", "userA");
